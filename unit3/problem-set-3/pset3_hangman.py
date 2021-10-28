@@ -15,9 +15,9 @@ import textwrap
 import re
 import sys
 
-# WORDLIST_FILENAME = r"C:\Users\Leon\Desktop\MIT_6.00.1x\words.txt"
-# WORDLIST_FILENAME = "C:\\Users\\Leon\\Desktop\\MIT_6.00.1x\\words.txt"
-WORDLIST_FILENAME = "C:/Users/Leon/Desktop/MIT_6.00.1x/words.txt"
+# WORD_LIST_FILENAME = r"C:\Users\Leon\Desktop\MIT_6.00.1x\words.txt"
+# WORD_LIST_FILENAME = "C:\\Users\\Leon\\Desktop\\MIT_6.00.1x\\words.txt"
+WORD_LIST_FILENAME = "C:/Users/Leon/Desktop/MIT_6.00.1x/words.txt"
 
 
 def load_words():
@@ -28,31 +28,31 @@ def load_words():
     take a while to finish.
     """
     print("Loading word list from file...")
-    # inFile: file
-    inFile = open(WORDLIST_FILENAME, "r")
+    # in_file: file
+    in_file = open(WORD_LIST_FILENAME, "r")
     # line: string
-    line = inFile.readline()
-    # wordlist: list of strings
-    wordlist = line.split()
-    print("  ", len(wordlist), "words loaded.")
-    return wordlist
+    line = in_file.readline()
+    # word_list: list of strings
+    word_list = line.split()
+    print("  ", len(word_list), "words loaded.")
+    return word_list
 
 
-def choose_word(wordlist):
+def choose_word(word_list):
     """
-    wordlist (list): list of words (strings)
+    word_list (list): list of words (strings)
 
-    Returns a word from wordlist at random
+    Returns a word from word_list at random
     """
-    return random.choice(wordlist)
+    return random.choice(word_list)
 
 
 # end of helper code
 # -----------------------------------
 
-# Load the list of words into the variable wordlist
+# Load the list of words into the variable word_list
 # so that it can be accessed from anywhere in the program
-wordlist = load_words()
+word_list = load_words()
 
 
 def is_word_guessed(secret_word, letters_guessed):
@@ -181,5 +181,5 @@ def hangman(secret_word):
 # and run this file to test! (hint: you might want to pick your own
 # secret_word while you're testing)
 
-# secret_word = choose_word(wordlist).lower()
+# secret_word = choose_word(word_list).lower()
 # print(hangman("boss"))

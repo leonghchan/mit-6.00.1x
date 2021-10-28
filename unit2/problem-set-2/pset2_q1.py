@@ -1,5 +1,5 @@
 """ 
-Problem set 2 
+Problem set 2 - Question 1
 
 Each month, a credit card statement will come with the option for you to pay a minimum amount of your 
 charge, usually 2% of the balance due. However, the credit card company earns money by charging interest 
